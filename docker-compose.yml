@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+      - VITE_API_URL=http://localhost:8000
+      - VITE_API_URL_2=http://localhost:8080
+      - CHOKIDAR_USEPOLLING=true
+      - VITE_MOZO_API_URL=http://localhost:8080
+    command: npm run dev -- --host 0.0.0.0
+    restart: unless-stopped
+
+networks:
+  default:
+    name: mercado-agricola-network 
