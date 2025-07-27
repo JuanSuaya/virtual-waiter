@@ -45,7 +45,7 @@ const copyToClipboard = async (text) => {
 };
 
 export default function TableQR() {
-  const [tableNumber, setTableNumber] = useState("12");
+  const [tableNumber, setTableNumber] = useState("35");
   const [qrUrl, setQrUrl] = useState("");
   const [chatUrl, setChatUrl] = useState("");
   const [loading, setLoading] = useState(false);

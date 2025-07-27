@@ -1,7 +1,7 @@
 import { Clock, MapPin, Phone } from "lucide-react";
 import logo from "@/assets/logos/waiter.png";
 
-const Header = ({ title = "Mercado Agrícola", subtitle = "Tu mozo virtual" }) => {
+const Header = ({ title = "Mercado Ferrando", subtitle = "Tu mozo virtual" }) => {
   return (
     <div className="relative bg-gradient-to-r from-violet-600 via-blue-600 to-violet-700 shadow-lg">
       {/* Background pattern */}

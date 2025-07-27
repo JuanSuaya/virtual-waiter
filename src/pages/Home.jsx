@@ -85,7 +85,7 @@ export default function Home() {
                 restaurantes
                 <div className="absolute -bottom-2 left-0 right-0 h-1 bg-yellow-300 rounded-full animate-pulse"></div>
               </span>{" "}
-              del Mercado Agrícola!
+              del Mercado Ferrando!
             </h1>
             
             <p className="text-lg sm:text-xl md:text-2xl text-violet-100 mb-8 max-w-3xl animate-fade-in delay-100 mx-auto text-center leading-relaxed">
@@ -145,7 +145,7 @@ export default function Home() {
               Nuestros <span className="text-violet-600">Restaurantes</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Descubre la diversidad gastronómica del Mercado Agrícola con opciones para todos los gustos
+              Descubre la diversidad gastronómica del Mercado Ferrando con opciones para todos los gustos
             </p>
           </div>
           
@@ -272,7 +272,7 @@ export default function Home() {
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
                 ¡Prueba nuestro nuevo{" "}
                 <span className="text-yellow-300">chatbot inteligente</span>{" "}
-                del Mercado Agrícola!
+                del Mercado Ferrando!
               </h2>
               
               <p className="text-xl text-violet-100 mb-8 max-w-3xl mx-auto leading-relaxed">

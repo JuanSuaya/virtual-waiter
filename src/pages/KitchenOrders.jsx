@@ -62,7 +62,7 @@ const STATUS_CONFIG = {
 export default function KitchenOrders() {
   const [orders, setOrders] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [selectedRestaurant, setSelectedRestaurant] = useState(30);
+  const [selectedRestaurant, setSelectedRestaurant] = useState(42);
   const [autoRefresh, setAutoRefresh] = useState(true);
   const [restaurantInfo, setRestaurantInfo] = useState(null);
 

@@ -91,13 +91,29 @@ const Chat = () => {
     try {
       const response = await chatWithWaiter(inputMessage, mesaParam, sessionId);
       
+      // Detectar si el bot está pidiendo confirmación del pedido
+      const responseLower = response.response.toLowerCase();
+      const showConfirm = responseLower.includes('confirmar') || 
+                         responseLower.includes('confirmo') ||
+                         responseLower.includes('confirmamos') ||
+                         responseLower.includes('¿confirmamos') ||
+                         responseLower.includes('confirmar el pedido') ||
+                         responseLower.includes('confirmamos el pedido') ||
+                         responseLower.includes('¿confirmamos el pedido') ||
+                         (responseLower.includes('total') && responseLower.includes('confirmamos')) ||
+                         responseLower.includes('¿confirmamos') ||
+                         responseLower.includes('confirmamos?');
+
+      console.log('Bot response:', response.response);
+      console.log('Show confirm:', showConfirm);
+      console.log('Response lower:', responseLower);
+
       const botResponse = {
         id: Date.now() + 1,
         type: "bot",
         content: response.response,
         timestamp: new Date(),
-        showConfirm: response.response.toLowerCase().includes('confirmar') || 
-                    response.response.toLowerCase().includes('confirmo'),
+        showConfirm: showConfirm,
       };
 
       setMessages(prev => [...prev, botResponse]);
@@ -199,7 +215,7 @@ const Chat = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-violet-50 via-blue-50 to-pink-50">
-      <Header title="Mercado Agrícola" subtitle="Tu mozo virtual" />
+      <Header title="Mercado Ferrando" subtitle="Tu mozo virtual" />
       
       <main className="flex-1">
 
@@ -418,7 +434,7 @@ const Chat = () => {
                   setMessages([{
                     id: 1,
                     type: "bot",
-                    content: "¡Hola! Soy tu mozo virtual del Mercado Agrícola. ¿Qué te gustaría pedir hoy?",
+                    content: "¡Hola! Soy tu mozo virtual del Mercado Ferrando. ¿Qué te gustaría pedir hoy?",
                     timestamp: new Date(),
                   }]);
                   setOrderConfirmed(false);
